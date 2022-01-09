@@ -26,10 +26,10 @@ export default function Card() {
   };
 
   return (
-    <div className="shadow-lg rounded-lg border h-[76px] justify-between flex items-center w-[300px] px-[30px] py-[20px] border-[#E5E7EB]">
+    <div className="shadow-lg bg-white dark:bg-[#262626] rounded-lg border h-[76px] justify-between flex items-center w-[300px] px-[30px] py-[20px] border-[#E5E7EB] dark:border-[#A3A3A3]">
       <RangeInput value={value} handleSlide={handleSlide}></RangeInput>
       <div className="relative w-[70px] h-full">
-        <label className="absolute right-[3px] color-true-grey-900 z-10 py-2">
+        <label className="absolute right-[3px] color-[#171717] z-10 py-2 dark:text-[#FFFFFF]">
           %
         </label>
         <input
@@ -40,11 +40,14 @@ export default function Card() {
           absolute
           left-0
           top-0
+          dark:bg-[#262626]
+          dark:border-[#A3A3A3]
           pr-[25px]
           py-1.5
           text-base
           font-normal
-          text-true-gray-900
+          dark:text-[#FFFFFF]
+          color-[#171717]
           bg-white bg-clip-padding
           border border-solid border-[#E5E7EB]
           rounded
