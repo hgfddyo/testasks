@@ -14,7 +14,7 @@ function DonateForm() {
   const [isConnected, setConnected] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
-  const [zefuBalance, setZefuBalance] = useState(0);
+  const [zefuBalance, setZefuBalance] = useState(0.0);
   const [zefuDonateCount, setZefuDonateCount] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const [commentValue, setCommentValue] = useState("");
@@ -96,7 +96,7 @@ function DonateForm() {
 
   if (!isDonated) {
     return (
-      <div className="shadow-xl bg-white rounded-lg border h-[640px] w-[526px] border-[#E5E7EB]">
+      <div className="shadow-xl bg-white rounded-[18px] border h-[640px] w-[526px] border-[#E5E7EB]">
         <div className="flex justify-end pt-[16px] pr-[16px]">
           <button className="rounded-full border-[#A0A0A0] border h-[22px] w-[22px] flex justify-center items-start">
             <span className="leading-[18px] text-[#A0A0A0] text-[20px] font-['Inter']">
@@ -104,10 +104,10 @@ function DonateForm() {
             </span>
           </button>
         </div>
-        <div className="flex justify-center mt-[4px]">
-          <img alt="star" width="62px" src={Star}></img>
+        <div className="flex justify-center mt-[6px]">
+          <img alt="star" width="75px" height="62px" src={Star}></img>
         </div>
-        <div className="flex justify-center mt-[30px] mx-[60px]">
+        <div className="flex justify-center mt-[20px] mx-[60px]">
           <h1 className="text-[26px] text-[#1D1D1D] leading-[30px] font-bold font-['Inter']">
             Donate the author
           </h1>
@@ -144,7 +144,7 @@ function DonateForm() {
           leading-[18px]
           text-[#999999]"
           >
-            Balance {zefuBalance} ZEFU
+            Balance {zefuBalance > 0 ? zefuBalance : "0.00"} ZEFU
           </span>
         </div>
         <div className="flex justify-center mx-[60px] h-[46px] items-center mt-[10px]">
@@ -261,7 +261,7 @@ function DonateForm() {
     );
   } else {
     return (
-      <div className="shadow-xl bg-white rounded-lg border h-[640px] w-[526px] border-[#E5E7EB]">
+      <div className="shadow-xl bg-white rounded-[18px] border h-[640px] w-[526px] border-[#E5E7EB]">
         <div className="flex justify-end pt-[16px] pr-[16px]">
           <button className="rounded-full border-[#A0A0A0] border h-[22px] w-[22px] flex justify-center items-start">
             <span className="leading-[18px] text-[#A0A0A0] text-[20px] font-['Inter']">
